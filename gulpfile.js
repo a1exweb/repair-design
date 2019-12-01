@@ -12,9 +12,10 @@ gulp.task('browser-sync', function () {
     gulp.watch("./*.*").on('change', browserSync.reload);
 });
 
-gulp.task('css-minify', function () {
-    gulp.src('./**/*.css')
+gulp.task('css-minify', function (done) {
+    gulp.src('src/**/*.css')
         .pipe(cssmin())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('dist'));
+        done();
 });
