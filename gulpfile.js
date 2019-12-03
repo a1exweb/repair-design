@@ -24,7 +24,7 @@ function serveSass() {
 };
 
 function cssMin() {
-    src('./css/*.css')
+    src(['./css/*.css', '!./css/*.min.css'])
         .pipe(cssmin())
         .pipe(rename({
             suffix: '.min'
