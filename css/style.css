@@ -329,9 +329,15 @@ template {
   border: none;
   border-radius: 2px;
   text-transform: uppercase; }
+  .button:hover {
+    cursor: pointer; }
   .button_primary {
     background-color: #E3B873;
-    color: #fff; }
+    color: #fff;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+    transition: box-shadow .3s; }
+    .button_primary:hover {
+      box-shadow: none; }
   .button_outline {
     background-color: transparent;
     border: 1px solid #fff;
@@ -364,7 +370,10 @@ template {
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
-  margin-right: 40px; }
+  margin-right: 40px;
+  transition: color .2s; }
+  .nav__item:hover {
+    color: #E3B873; }
 
 .phone {
   color: #E3B873; }
@@ -382,7 +391,15 @@ template {
   background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
   height: 100vh;
   color: #fff; }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(19, 19, 19, 0.7); }
   .hero__content {
+    position: relative;
     max-width: 670px; }
   .hero__text {
     font-size: 22px;
@@ -409,6 +426,14 @@ template {
     font-family: 'YesevaOne', sans-serif;
     text-transform: uppercase;
     text-decoration: none; }
+    .hero__scroll-down::after {
+      content: '';
+      background: url("../img/arrow-down.svg") no-repeat center;
+      width: 30px;
+      height: 30px;
+      margin-left: 12px;
+      border: 2px solid #E3B873;
+      border-radius: 50%; }
 
 .instagram {
   display: flex;
@@ -416,10 +441,19 @@ template {
   align-items: center;
   background-color: #131313; }
   .instagram__link {
+    display: flex;
+    align-items: center;
     color: #E3B873;
     text-transform: uppercase;
     text-decoration: none;
+    line-height: 0.8;
     transform: rotate(90deg); }
+    .instagram__link::after {
+      content: '';
+      width: 50px;
+      height: 1px;
+      margin-left: 8px;
+      background-color: #E3B873; }
 
 .title {
   margin: 0;
@@ -429,7 +463,7 @@ template {
   .title_primary {
     color: #E3B873; }
 
-*, *:before, *:after {
+*, *::before, *::after {
   box-sizing: border-box; }
 
 body {
