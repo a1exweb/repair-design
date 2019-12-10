@@ -641,6 +641,8 @@ img {
 
 @media screen and (max-width: 380px) {
   .card__text {
-    max-width: 18.2rem; }
+    max-width: 18.2rem; } }
+
+@media screen and (max-width: 350px) {
   .hero__text {
     max-width: 22.5rem; } }
