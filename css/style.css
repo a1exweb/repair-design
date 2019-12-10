@@ -609,6 +609,8 @@ img {
     margin-bottom: 5rem; } }
 
 @media screen and (max-width: 570px) {
+  .container {
+    width: 90%; }
   .contacts__phone {
     margin-right: 0;
     color: #fff;
@@ -616,17 +618,20 @@ img {
   .contacts__button {
     display: none; }
   .title {
-    font-size: 1.64rem; }
+    font-size: 1.94rem; }
   .hero__scroll-down {
     display: none; }
   .hero__content {
-    max-width: 22.86rem; }
+    max-width: none; }
   .hero__text {
-    font-size: 1.29rem;
-    margin-bottom: 2.28rem; }
+    max-width: 26.7rem;
+    margin-top: 1.2rem;
+    margin-bottom: 2.7rem;
+    font-size: 1.5rem;
+    line-height: 2rem; }
   .hero__button {
     display: block;
-    max-width: 22.86rem;
+    max-width: none;
     width: 100%;
     margin-bottom: 1.85rem; } }
 
