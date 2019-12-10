@@ -53,6 +53,8 @@
     .title
         font-size: 1.94rem
     .hero
+        &__title
+            max-width: 27rem
         &__scroll-down
             display: none
         &__content
@@ -64,15 +66,16 @@
             font-size: 1.5rem
             line-height: 2rem
         &__button
-            display: block
-            max-width: none
-            width: 100%
             margin-bottom: 1.85rem
 @media screen and ( max-height: 520px )
     .hero
         &__scroll-down
             display: none
-@media screen and ( max-width: 380px )
+@media screen and ( max-width: 400px )
+    .hero
+        &__button
+            display: block
+            width: 100%
     .card
         &__text
             max-width: 18.2rem
