@@ -606,6 +606,16 @@ img {
     margin-bottom: 2.78rem; }
   .design__card {
     margin-bottom: 5.7rem; }
+  .design__overlay-image {
+    position: relative;
+    display: flex;
+    max-width: max-content; }
+    .design__overlay-image::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: rgba(19, 19, 19, 0.5); }
 
 .modal {
   position: fixed;

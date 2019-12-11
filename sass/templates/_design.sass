@@ -5,3 +5,13 @@
         margin-bottom: 2.78rem
     &__card
         margin-bottom: 5.7rem
+    &__overlay-image
+        position: relative
+        display: flex
+        max-width: max-content
+        &::before
+            position: absolute
+            content: ''
+            width: 100%
+            height: 100%
+            background-color: rgba($dark, .5)
