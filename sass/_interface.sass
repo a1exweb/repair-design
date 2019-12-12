@@ -54,3 +54,24 @@
             border-radius: 1px
             margin-right: 0.57rem
             cursor: pointer
+.page-up
+    position: fixed
+    top: 50%
+    right: 1rem
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 2rem
+    height: 2rem
+    transform: translateY(-50%)
+    border-radius: 50%
+    cursor: pointer
+    display: none
+    &::before
+        content: ''
+        border: 2px solid $primary
+        width: 2rem
+        height: 2rem
+        border-radius: 50%
+        background: url('../img/arrow-down.svg') no-repeat center
+        transform: rotate(180deg)
