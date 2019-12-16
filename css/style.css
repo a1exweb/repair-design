@@ -932,9 +932,6 @@ template {
 .col-50 {
   width: 50%; }
 
-.order-top {
-  order: -1; }
-
 *, *::before, *::after {
   box-sizing: border-box; }
 
@@ -1277,6 +1274,10 @@ img {
     align-self: flex-end;
     padding: 1.357rem 3rem; }
 
+@media screen and (min-width: 992px) {
+  .margin-top {
+    margin-top: -14rem; } }
+
 @media screen and (max-width: 1400px) {
   .nav__item {
     margin-right: 1.5rem; }
@@ -1317,7 +1318,9 @@ img {
   .swiper-button-next {
     left: 60% !important; }
   .swiper-wrapper {
-    margin-bottom: 2rem; } }
+    margin-bottom: 2rem; }
+  .order-top {
+    order: -1; } }
 
 @media screen and (max-width: 820px) {
   .design {
