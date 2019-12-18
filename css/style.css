@@ -871,10 +871,10 @@ template {
   color: #fff;
   border: none;
   border-bottom: 1px solid rgba(54, 54, 54, 0.3); }
-  .input::placeholder {
-    color: #fff; }
   .input_light {
     border-bottom: 1px solid rgba(255, 255, 255, 0.15); }
+    .input_light::placeholder {
+      color: #fff; }
 
 .policy__checkbox {
   opacity: 0;
@@ -906,7 +906,8 @@ template {
   transform: translateY(-50%);
   border-radius: 50%;
   cursor: pointer;
-  display: none; }
+  display: none;
+  z-index: 99; }
   .page-up::before {
     content: '';
     border: 2px solid #E3B873;
@@ -954,6 +955,8 @@ img {
     text-align: center; }
     .section-title_left {
       text-align: left; }
+    .section-title_light {
+      color: #fff; }
     .section-title__heading {
       font-family: 'Yeseva One';
       text-transform: uppercase;
@@ -982,7 +985,8 @@ img {
         margin: 0 10px;
         width: 32px;
         height: 2px;
-        background-color: #E3B873; }
+        background-color: #E3B873;
+        border-radius: 30px; }
     .section-title__description {
       max-width: 52.92rem;
       margin: auto;
@@ -1171,13 +1175,14 @@ img {
   bottom: 0; }
 
 .control__section-title {
-  margin-bottom: 2.214rem;
-  margin-bottom: -30rem; }
+  margin-top: -30rem;
+  margin-bottom: 2.214rem; }
 
 .control__video {
   position: relative;
   display: flex;
   margin: auto;
+  margin-bottom: 4.428rem;
   max-width: 58.357rem;
   min-height: 31rem;
   background: #131313 url("../img/video-mask.jpg") no-repeat center;
@@ -1188,6 +1193,48 @@ img {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8); }
+
+.control__text {
+  max-width: 40rem;
+  margin: auto;
+  margin-bottom: 4.285rem;
+  text-align: center;
+  font-size: 1.428rem;
+  line-height: 2.4rem; }
+  .control__text::before {
+    content: '';
+    margin: auto;
+    margin-bottom: 2.5rem;
+    display: block;
+    width: 55px;
+    height: 2px;
+    background-color: #E3B873;
+    border-radius: 30px; }
+
+.control__form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 55rem;
+  margin: auto; }
+
+.control__input-group {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 30%; }
+
+.control__label {
+  margin-bottom: -7px; }
+
+.control__button {
+  padding: 1.285rem 4.785rem; }
+
+.control__policy {
+  flex-basis: 100%;
+  margin-top: 1.2rem;
+  order: 5; }
+  .control__policy-label {
+    justify-content: center; }
 
 .video__play {
   position: relative;
@@ -1349,7 +1396,28 @@ img {
     order: -1; }
   .row {
     flex-direction: column;
-    align-items: center; } }
+    align-items: center; }
+  .projects {
+    padding-bottom: 80rem; }
+  .control__section-title {
+    margin-top: -80rem; }
+  .control__text {
+    color: #fff; }
+  .control__form {
+    flex-direction: column; }
+  .control__label {
+    color: rgba(255, 255, 255, 0.5); }
+  .control__input {
+    border-bottom: 1px solid #fff; }
+    .control__input-group:first-child {
+      margin-bottom: 2rem; }
+    .control__input::placeholder {
+      color: #fff; }
+  .control__policy {
+    color: #fff;
+    order: unset;
+    margin-top: 0;
+    margin-bottom: 1.4rem; } }
 
 @media screen and (max-width: 820px) {
   .design {
@@ -1415,6 +1483,12 @@ img {
   .hero__scroll-down {
     display: none; } }
 
+@media screen and (max-width: 506px) {
+  .projects {
+    padding-bottom: 82.5rem; }
+  .control__section-title {
+    margin-top: -82.5rem; } }
+
 @media screen and (max-width: 400px) {
   .hero__button {
     display: block;
@@ -1422,6 +1496,24 @@ img {
   .card__text {
     max-width: 18.2rem; } }
 
+@media screen and (max-width: 398px) {
+  .projects {
+    padding-bottom: 84.5rem; }
+  .control__section-title {
+    margin-top: -84.5rem; } }
+
 @media screen and (max-width: 350px) {
   .hero__text {
     max-width: 22.5rem; } }
+
+@media screen and (max-width: 347px) {
+  .projects {
+    padding-bottom: 87rem; }
+  .control__section-title {
+    margin-top: -87rem; } }
+
+@media screen and (max-width: 321px) {
+  .projects {
+    padding-bottom: 89.5rem; }
+  .control__section-title {
+    margin-top: -89.5rem; } }

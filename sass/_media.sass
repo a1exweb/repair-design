@@ -51,6 +51,28 @@
     .row
         flex-direction: column
         align-items: center
+    .projects
+        padding-bottom: 80rem
+    .control
+        &__section-title
+            margin-top: -80rem
+        &__text
+            color: $light
+        &__form
+            flex-direction: column
+        &__label
+            color: rgba($light, .5)
+        &__input
+            border-bottom: 1px solid $light
+            &-group:first-child
+                margin-bottom: 2rem
+            &::placeholder
+                color: $light
+        &__policy
+            color: $light
+            order: unset
+            margin-top: 0
+            margin-bottom: 1.4rem
 @media screen and ( max-width: 820px )
     .design
         background-color: $dark
@@ -118,6 +140,12 @@
     .hero
         &__scroll-down
             display: none
+@media screen and ( max-width: 506px )
+    .projects
+        padding-bottom: 82.5rem
+    .control
+        &__section-title
+            margin-top: -82.5rem
 @media screen and ( max-width: 400px )
     .hero
         &__button
@@ -126,6 +154,25 @@
     .card
         &__text
             max-width: 18.2rem
+@media screen and ( max-width: 398px )
+    .projects
+        padding-bottom: 84.5rem
+    .control
+        &__section-title
+            margin-top: -84.5rem
 @media screen and ( max-width: 350px )
     .hero__text
         max-width: 22.5rem
+@media screen and ( max-width: 347px )
+    .projects
+        padding-bottom: 87rem
+    .control
+        &__section-title
+            margin-top: -87rem
+@media screen and ( max-width: 321px )
+    .projects
+        padding-bottom: 89.5rem
+    .control
+        &__section-title
+            margin-top: -89.5rem
+            
