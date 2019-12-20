@@ -920,7 +920,9 @@ template {
     background: url("../img/arrow-down.svg") no-repeat center;
     transform: rotate(180deg); }
 
-.invalid {
+div.invalid {
+  position: absolute;
+  bottom: -5px;
   color: tomato; }
 
 input.invalid {
@@ -1390,6 +1392,7 @@ img {
     display: flex;
     flex-direction: column; }
   .modal__input-group {
+    position: relative;
     display: flex;
     flex-direction: column;
     margin-bottom: 3.428rem; }
