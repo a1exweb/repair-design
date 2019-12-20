@@ -80,4 +80,44 @@ $(document).ready(function () {
     var bullets = $('.swiper-pagination');
     next.css('left', prev.width() + 10 + bullets.width() + 10);
     bullets.css('left', prev.width() + 10);
+
+    // Validation form
+    $('.modal__form').validate({
+        errorElement: "div",
+        errorClass: "invalid",
+        rules: {
+            // simple rule, converted to {required:true}
+            userName: {
+                required: true,
+                minlength: 2,
+                maxlength: 32
+            },
+            // compound rule
+            userPhone: {
+                required: true,
+                minlength: 17
+            },
+            userEmail: {
+                required: true,
+                email: true
+            }
+        },
+        messages: {
+            userName: {
+                required: "Заполните поле Имя",
+                minlength: "Минимиальная длина имени {0} символа",
+                maxlength: "Максимальная длина имени {0} символа"
+            },
+            userPhone: {
+                required: "Заполните поле Телефон",
+                minlength: "Введите корректный Телефон",
+            },
+            userEmail: {
+                required: "Заполните поле Email",
+                email: "Введите корректный Email"
+            }
+        }
+    });
+    // Mask for Phone
+    $('input[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7(___) ___-__-__"});
 });
