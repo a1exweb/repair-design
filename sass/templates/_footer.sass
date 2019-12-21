@@ -24,6 +24,7 @@
     &__input
         padding-top: 0.3rem
         &-group
+            position: relative
             display: flex
             flex-direction: column
             flex-basis: 45%
@@ -31,6 +32,8 @@
             &_full-width
                 flex-basis: 100%
                 margin-bottom: 2rem
+    &__invalid
+        color: tomato
     &__policy
         flex-basis: 100%
         margin-bottom: 3.6rem
@@ -40,3 +43,11 @@
     &__menu
         background-color: $dark
         padding: 4.285rem 0
+div
+    &.footer__invalid
+        position: absolute
+        bottom: -1.2rem
+        font-size: 0.99rem
+input
+    &.footer__invalid
+        border-bottom: 1px solid tomato

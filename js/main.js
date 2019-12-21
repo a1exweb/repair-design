@@ -118,6 +118,76 @@ $(document).ready(function () {
             }
         }
     });
+
+    $('.control__form').validate({
+        errorElement: "div",
+        errorClass: "control__invalid",
+        rules: {
+            // simple rule, converted to {required:true}
+            userName: {
+                required: true,
+                minlength: 2,
+                maxlength: 32
+            },
+            // compound rule
+            userPhone: {
+                required: true,
+                minlength: 17
+            },
+            userEmail: {
+                required: true,
+                email: true
+            }
+        },
+        messages: {
+            userName: {
+                required: "Заполните поле Имя",
+                minlength: "Минимиальная длина имени {0} символа",
+                maxlength: "Максимальная длина имени {0} символа"
+            },
+            userPhone: {
+                required: "Заполните поле Телефон",
+                minlength: "Введите корректный Телефон",
+            }
+        }
+    });
+
+    $('.footer__form').validate({
+        errorElement: "div",
+        errorClass: "footer__invalid",
+        rules: {
+            // simple rule, converted to {required:true}
+            userName: {
+                required: true,
+                minlength: 2,
+                maxlength: 32
+            },
+            // compound rule
+            userPhone: {
+                required: true,
+                minlength: 17
+            },
+            userQuestion: {
+                required: true,
+                minlength: 15
+            }
+        },
+        messages: {
+            userName: {
+                required: "Заполните поле Имя",
+                minlength: "Минимиальная длина имени {0} символа",
+                maxlength: "Максимальная длина имени {0} символа"
+            },
+            userPhone: {
+                required: "Заполните поле Телефон",
+                minlength: "Введите корректный Телефон",
+            },
+            userQuestion: {
+                required: "Заполните поле Вопрос",
+                minlength: "Минимиальная длина вопроса {0} символов",
+            }
+        }
+    });
     // Mask for Phone
     $('input[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7(___) ___-__-__"});
 });
