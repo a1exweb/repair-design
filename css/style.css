@@ -1363,6 +1363,12 @@ input.control__invalid {
   .footer__menu {
     background-color: #131313;
     padding: 4.285rem 0; }
+  .footer__map {
+    max-width: 68.928rem;
+    min-height: 33.214rem;
+    margin: auto;
+    margin-bottom: 4rem;
+    filter: grayscale(1); }
 
 div.footer__invalid {
   position: absolute;
