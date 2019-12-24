@@ -1706,6 +1706,19 @@ input.footer__invalid {
       flex-basis: 100%; }
     .footer__button {
       width: 100%; }
+    .footer__box-reverse {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column; }
+    .footer__icons {
+      margin-bottom: 0rem; }
+    .footer__map {
+      margin: unset;
+      -webkit-box-ordinal-group: 0;
+      order: -1;
+      margin-bottom: 2rem; }
   .policy__label_center {
     -webkit-box-pack: start;
     justify-content: flex-start; } }
@@ -1771,7 +1784,10 @@ input.footer__invalid {
       border-radius: 50%;
       background: url("../img/arrow-down.svg") no-repeat center/contain;
       -webkit-transform: rotate(180deg);
-      transform: rotate(180deg); } }
+      transform: rotate(180deg); }
+  .footer__title {
+    max-width: 20rem;
+    font-size: 1.2rem; } }
 
 @media screen and (max-height: 520px) {
   .hero__scroll-down {
