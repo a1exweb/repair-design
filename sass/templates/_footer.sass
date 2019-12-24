@@ -1,6 +1,7 @@
 .footer
     background: $dark url('../img/footer-bg.jpg') no-repeat center / cover
     padding-top: 3rem
+    padding-bottom: 0
     &__wrap
         max-width: 63.07rem
         margin: auto
@@ -43,6 +44,39 @@
     &__menu
         background-color: $dark
         padding: 4.285rem 0
+    &__title
+        margin: auto
+        margin-bottom: 1rem
+        max-width: 32rem
+    &__phone
+        color: $primary
+        text-decoration: none
+    &__icon
+        display: flex
+        width: 2rem
+        height: 2rem
+        background: $primary
+        border-radius: 50%
+        transition: all .3s
+        &:hover
+            background: darken($primary, 10%)
+        &s
+            display: flex
+            justify-content: space-between
+            max-width: 5rem
+            margin: auto
+            margin-bottom: 3rem
+        &_mail, &_instagram
+            &::after
+                content: ''
+                width: 100%
+                height: 100%
+        &_mail
+            &::after                
+                background: url('../img/mail-icon.svg') no-repeat center
+        &_instagram
+            &::after
+                background: url('../img/instagram-icon.svg') no-repeat center
     &__map
         max-width: 68.928rem
         min-height: 33.214rem
@@ -60,3 +94,4 @@ input
 .google-map
     width: 100%
     height: 465px
+    border: 0

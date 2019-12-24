@@ -914,10 +914,10 @@ template {
     background-color: #E3B873;
     color: #fff;
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
-    -webkit-transition: box-shadow .3s;
-    transition: box-shadow .3s; }
+    -webkit-transition: all .3s;
+    transition: all .3s; }
     .button_primary:hover {
-      background-color: #dfad5e;
+      background-color: #dba249;
       box-shadow: none; }
   .button_outline {
     background-color: transparent;
@@ -1440,7 +1440,8 @@ input.control__invalid {
 
 .footer {
   background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
-  padding-top: 3rem; }
+  padding-top: 3rem;
+  padding-bottom: 0; }
   .footer__wrap {
     max-width: 63.07rem;
     margin: auto;
@@ -1488,6 +1489,40 @@ input.control__invalid {
   .footer__menu {
     background-color: #131313;
     padding: 4.285rem 0; }
+  .footer__title {
+    margin: auto;
+    margin-bottom: 1rem;
+    max-width: 32rem; }
+  .footer__phone {
+    color: #E3B873;
+    text-decoration: none; }
+  .footer__icon {
+    display: -webkit-box;
+    display: flex;
+    width: 2rem;
+    height: 2rem;
+    background: #E3B873;
+    border-radius: 50%;
+    -webkit-transition: all .3s;
+    transition: all .3s; }
+    .footer__icon:hover {
+      background: #dba249; }
+    .footer__icons {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-pack: justify;
+      justify-content: space-between;
+      max-width: 5rem;
+      margin: auto;
+      margin-bottom: 3rem; }
+    .footer__icon_mail::after, .footer__icon_instagram::after {
+      content: '';
+      width: 100%;
+      height: 100%; }
+    .footer__icon_mail::after {
+      background: url("../img/mail-icon.svg") no-repeat center; }
+    .footer__icon_instagram::after {
+      background: url("../img/instagram-icon.svg") no-repeat center; }
   .footer__map {
     max-width: 68.928rem;
     min-height: 33.214rem;
@@ -1506,7 +1541,8 @@ input.footer__invalid {
 
 .google-map {
   width: 100%;
-  height: 465px; }
+  height: 465px;
+  border: 0; }
 
 .modal {
   position: fixed;
