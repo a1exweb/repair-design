@@ -1306,7 +1306,7 @@ img {
   margin-bottom: 4.428rem;
   max-width: 58.357rem;
   min-height: 31rem;
-  background: #131313 url("../img/video-mask.jpg") no-repeat center;
+  background: #131313 url("../img/video-mask.jpg") no-repeat center/cover;
   box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15); }
   .control__video::before {
     content: '';
@@ -1370,7 +1370,8 @@ img {
 
 .video__play {
   position: relative;
-  margin: auto; }
+  margin: auto;
+  cursor: pointer; }
 
 div.control__invalid {
   position: absolute;
@@ -1697,6 +1698,8 @@ input.footer__invalid {
       margin-bottom: 1.4rem; }
     .control__button {
       margin-bottom: -6.5rem; }
+  .video__play {
+    max-height: 6rem; }
   .footer {
     background: #131313; }
     .footer__wrap {
@@ -1785,6 +1788,8 @@ input.footer__invalid {
       background: url("../img/arrow-down.svg") no-repeat center/contain;
       -webkit-transform: rotate(180deg);
       transform: rotate(180deg); }
+  .control__video {
+    min-height: 19rem; }
   .footer__title {
     max-width: 20rem;
     font-size: 1.2rem; } }
