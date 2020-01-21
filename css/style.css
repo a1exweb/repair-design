@@ -1724,9 +1724,7 @@ input.footer__invalid {
       margin-bottom: 2rem; }
   .policy__label_center {
     -webkit-box-pack: start;
-    justify-content: flex-start; } }
-
-@media screen and (max-width: 820px) {
+    justify-content: flex-start; }
   .design {
     background-color: #131313; }
     .design__section-title {

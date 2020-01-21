@@ -27,14 +27,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
 */
 $(document).ready(function () {
     const modal = $('.modal'),
-    modalBtn = $('[data-toggle=modal]'),
-    showModal = () => {
-        modal.addClass('modal_visible');
-    },
-    hideModal = () => {
-        modal.removeClass('modal_visible');
-    },
-    closeBtn = $('.modal__close');
+        modalBtn = $('[data-toggle=modal]'),
+        showModal = () => {
+            modal.addClass('modal_visible');
+        },
+        hideModal = () => {
+            modal.removeClass('modal_visible');
+        },
+        closeBtn = $('.modal__close');
     modalBtn.on('click', showModal);
     closeBtn.on('click', hideModal);
     $(window).on('click', function (event) {
@@ -189,8 +189,24 @@ $(document).ready(function () {
         }
     });
     // Mask for Phone
-    $('input[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7(___) ___-__-__"});
+    $('input[type=tel]').mask('+7(000) 000-00-00', { placeholder: "+7(___) ___-__-__" });
+    
 
+    var player;
+    $('.video__play').on('click', function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+            height: '465',
+            width: '100%',
+            videoId: 'RHzzLqJWqHs',
+            events: {
+                'onReady': videoPlay
+            }
+        });
+        $('.video__play').css('max-height', '31rem');
+    })
+    function videoPlay(event) {
+        event.target.playVideo();
+    }
     // // map 
     // ymaps.ready(function () {
     //     var myMap = new ymaps.Map('map', {
